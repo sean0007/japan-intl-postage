@@ -1,0 +1,60 @@
+# Japan International Postage 2027
+
+> Free, unofficial calculator for Japan Post's international mail price revision for items posted from 2027-02-01 (国際郵便料金の改定, announced 2026-10-09). Given a destination (country or zone 1–5) and a weight, it returns the current price (incl. the special surcharge on zone 3/4 EMS and air parcels) and the revised price of every service: EMS, international parcel (air, SAL, surface), small packet (air), International Air Packet, standard letter, postcard. Plus the change in yen and %, which applies on the posting date, the cheapest / cheapest tracked / cheapest air option, and the EMS weight-band shift. Rates as of 2026-10-19 from Japan Post's published tables. Not affiliated with Japan Post.
+
+Site: https://japan-intl-postage.vercel.app
+
+## Key facts (official sources below)
+- Revised prices apply to items POSTED on or after 2027-02-01 (Mon). Up to 2027-01-31: current prices.
+- EMS weight bands: now up to 500 g, then 100 g steps to 1 kg, 250 g steps to 2 kg, 500 g steps to 6 kg, then 1 kg steps. From 2027-02-01: 1 kg steps from 1 kg to 30 kg, so light EMS rises most.
+- EMS to the US (zone 4): 500 g ¥3,900 → ¥7,400; 1 kg ¥5,300 → ¥7,400; 2 kg ¥7,900 → ¥10,300; 5.5 kg ¥16,300 → ¥21,400.
+- Postcard by air: ¥100 → ¥140 to every country. Standard letter 25 g: zone 1 ¥120 → ¥160; zones 3/4 ¥140 → ¥190; zone 5 ¥160 → ¥220.
+- Small packet by air (up to 2 kg, 90 cm L+W+H, untracked): e.g. zone 4 100 g ¥830 → ¥1,290, 2 kg ¥4,820 → ¥6,230.
+- International Air Packet (tracked small packet up to 2 kg): zone 4 100 g ¥1,200 → ¥1,680, 2 kg ¥5,190 → ¥6,620.
+- The special surcharge (特別追加料金) on EMS and air parcels to zones 3 and 4 is ¥0 from 2027-02-01 (already in the revised tables).
+- SAL (economy air) parcels remain suspended; Japan Post says the restart date is undecided.
+- 2027 parcel same-time discount: 10–49 items 10%, 50+ items 13%. 2027 extras: 国際特定記録 ¥390, registration ¥900, insurance ¥960 up to ¥20,000.
+- Asahi Shimbun reported the average rise as about 37%.
+- Zones: 1 China, South Korea, Taiwan · 2 rest of Asia · 3 Oceania, Canada, Mexico, Middle East, Europe (incl. Russia, Turkey, Central Asia) · 4 USA incl. Guam, Puerto Rico and other territories · 5 Central & South America (except Mexico), Africa.
+
+## API (free, no key, CORS open)
+
+### GET
+GET https://japan-intl-postage.vercel.app/api/check?destination=US&weightGrams=500
+→ zone 4, quotes[] per service {current {priceJPY, bandMaxGrams}, revised {…}, changeJPY, changePct, applicableJPY, tracked, available, suspended}, cheapest {current, revised, trackedCurrent, trackedRevised, airCurrent, airRevised}, emsBand, notes, sources, disclaimer
+
+### POST
+POST https://japan-intl-postage.vercel.app/api/check
+{"destination":"イギリス","weightKg":1.2,"service":"ems","shipDate":"2027-02-10"}
+→ zone 3, ratesApplied "revised_2027_02_01", one EMS quote
+
+Parameters: destination (ISO code, English or Japanese name; or zone 1–5), weightGrams or weightKg (up to 30 kg; not needed for service=postcard_air), service (ems | parcel_air | parcel_sal | parcel_surface | small_packet_air | airpacket | letter_standard_air | postcard_air; default all that fit), shipDate (YYYY-MM-DD, default today JST), items (parcels posted together).
+
+### Other endpoints
+- GET https://japan-intl-postage.vercel.app/api/rules (both full rate tables, zones, countries, service limits, sources)
+- https://japan-intl-postage.vercel.app/openapi.json
+- https://japan-intl-postage.vercel.app/.well-known/ai-plugin.json
+- MCP: tool japan_international_postage_check on https://free-agent-tools.vercel.app/mcp
+
+## Sources (official, Japan Post)
+- https://www.post.japanpost.jp/newsrelease/pressrelease/8139449440.html (press release 2026-10-09)
+- https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/ (revision notice and FAQ)
+- https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/pdf/charges.pdf (revised price tables)
+- https://www.post.japanpost.jp/send/oversea/charge/list-ems/all.html (current EMS, incl. surcharge)
+- https://www.post.japanpost.jp/send/oversea/charge/list-parcel/zone4.html (current parcels, zones 1–5)
+- https://www.post.japanpost.jp/send/oversea/charge/list-normal/zone4.html (current letters, postcards, small packets)
+- https://www.post.japanpost.jp/service/send/oversea/information/overview.html (国・地域別の差出可否: acceptance by country)
+
+## Disclaimer
+Unofficial estimate from Japan Post's published rate tables, not affiliated with Japan Post. Prices, surcharges and acceptance by country can change; size limits, customs forms and prohibited items are not checked. Confirm at the post office before you ship.
+
+## Other free tools by the same maker
+- Japan Tax-Free Refund Checker: https://japan-tax-free-refund.vercel.app
+- Japan Customs Allowance Checker: https://japan-customs-allowance.vercel.app
+- Japan Luggage Check: https://japan-luggage.vercel.app
+- Japan Visa Fee Calculator: https://japan-visa-fee.vercel.app
+- Japan PR Guideline Check: https://japan-pr-check.vercel.app
+- Japan Dual Pricing Check: https://japan-dual-pricing.vercel.app
+- Japan Alert Decoder: https://japan-alert-decoder.vercel.app
+- Japan Trip Brain: https://japan-trip-brain.vercel.app
+- Free Agent Tools MCP: https://free-agent-tools.vercel.app
