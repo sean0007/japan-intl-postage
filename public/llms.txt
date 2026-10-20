@@ -39,7 +39,7 @@ Parameters: destination (ISO code, English or Japanese name; or zone 1–5), wei
 ## Sources (official, Japan Post)
 - https://www.post.japanpost.jp/newsrelease/pressrelease/8139449440.html (press release 2026-10-09)
 - https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/ (revision notice and FAQ)
-- https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/pdf/charges.pdf (revised price tables)
+- https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/charges.pdf (revised price tables)
 - https://www.post.japanpost.jp/send/oversea/charge/list-ems/all.html (current EMS, incl. surcharge)
 - https://www.post.japanpost.jp/send/oversea/charge/list-parcel/zone4.html (current parcels, zones 1–5)
 - https://www.post.japanpost.jp/send/oversea/charge/list-normal/zone4.html (current letters, postcards, small packets)

@@ -13,7 +13,7 @@ Free calculator for **Japan Post's international mail price revision for items p
 
 `lib/rates-data.ts` is generated from Japan Post's official pages and the revised-rate PDF (snapshot 2026-10-19). Rows are `[maxWeightGrams, zone1..zone5]` in JPY. Current EMS and air-parcel prices to zones 3 and 4 include the special surcharge (特別追加料金), which is ¥0 from 2027-02-01.
 
-Sources: [press release](https://www.post.japanpost.jp/newsrelease/pressrelease/8139449440.html), [revision notice](https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/), [revised tables PDF](https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/pdf/charges.pdf), [current EMS](https://www.post.japanpost.jp/send/oversea/charge/list-ems/all.html), [current parcels](https://www.post.japanpost.jp/send/oversea/charge/list-parcel/zone4.html), [current letters / small packets](https://www.post.japanpost.jp/send/oversea/charge/list-normal/zone4.html).
+Sources: [press release](https://www.post.japanpost.jp/newsrelease/pressrelease/8139449440.html), [revision notice](https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/), [revised tables PDF](https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/charges.pdf), [current EMS](https://www.post.japanpost.jp/send/oversea/charge/list-ems/all.html), [current parcels](https://www.post.japanpost.jp/send/oversea/charge/list-parcel/zone4.html), [current letters / small packets](https://www.post.japanpost.jp/send/oversea/charge/list-normal/zone4.html).
 
 ## Dev
 

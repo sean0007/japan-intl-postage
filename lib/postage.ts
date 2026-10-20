@@ -11,7 +11,7 @@ export const DISCLAIMER =
 export const SOURCES = [
   "https://www.post.japanpost.jp/newsrelease/pressrelease/8139449440.html",
   "https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/",
-  "https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/pdf/charges.pdf",
+  "https://www.post.japanpost.jp/service/send/oversea/information/fee_revision_2027/charges.pdf",
   "https://www.post.japanpost.jp/send/oversea/charge/list-ems/all.html",
   "https://www.post.japanpost.jp/send/oversea/charge/list-parcel/zone4.html",
   "https://www.post.japanpost.jp/send/oversea/charge/list-normal/zone4.html",
