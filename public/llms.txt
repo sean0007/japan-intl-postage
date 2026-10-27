@@ -56,6 +56,7 @@ Unofficial estimate from Japan Post's published rate tables, not affiliated with
 - Japan PR Guideline Check: https://japan-pr-check.vercel.app
 - Japan Re-entry Deadline Check: https://japan-reentry-check.vercel.app
 - Japan Overseas Dependents Check (claim a relative living outside Japan as a dependent / 国外居住親族: age 16-29, 30-69 and 70+ rules, ¥380,000 remittance test, 2026 ¥620,000 income limit, deduction and tax saving; keyless API): https://japan-overseas-dependents.vercel.app
+- Japan Part-time Work Check (can a student, dependent or work-visa holder take this part-time job or side gig: 資格外活動許可 comprehensive 28-hour vs individual permission, rolling 7-day hours, students' 8 h/day vacation rule, banned 風俗営業 venues, 2026-10-01 pachinko / game-center change for Dependent holders; keyless API): https://japan-parttime-check.vercel.app
 - Japan Dual Pricing Check: https://japan-dual-pricing.vercel.app
 - Japan Alert Decoder: https://japan-alert-decoder.vercel.app
 - Japan Trip Brain: https://japan-trip-brain.vercel.app
