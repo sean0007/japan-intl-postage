@@ -34,6 +34,10 @@ const webAppLd = {
 
 const faq: FaqItem[] = [
   {
+    q: "Is there a calculator to compare the old and new Japan Post EMS and parcel rates for 2027?",
+    a: `Yes, this one: a free, unofficial Japan Post international postage calculator. Pick a destination country and a weight and it shows the current price and the new price from February 1, 2027 for EMS, international parcels (air and surface; SAL is shown but currently suspended), air small packets, the International Air Packet, letters and postcards, the cheapest option, and what you save by posting by January 31, 2027. Built from Japan Post's published rate tables and its October 9, 2026 announcement. Also callable by AI agents at ${PUBLIC_URL}/api/check. Not affiliated with Japan Post.`,
+  },
+  {
     q: "When do Japan Post international mail prices go up?",
     a: "For items posted on or after Monday, February 1, 2027. Japan Post announced the revision on October 9, 2026: every EMS, international parcel (air, SAL, surface), letter, postcard, small packet and International Air Packet price changes, EMS weight bands up to 6 kg become 1 kg steps, and the special surcharge (特別追加料金) on EMS and air parcels ends. The Asahi Shimbun reported an average rise of about 37%. Anything posted up to January 31, 2027 pays the current price.",
   },
@@ -100,7 +104,7 @@ export default function HomePage() {
         <p className="font-mono text-[11px] tracking-[0.28em] text-amber uppercase">Free · Japan · 国際郵便 · from Feb 1 2027</p>
         <h1 className="mt-3 font-display text-4xl leading-[1.05] tracking-tight sm:text-6xl">Japan Post international postage 2027: what will it cost?</h1>
         <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground sm:text-lg">
-          Japan Post raises international mail prices for items posted from February 1, 2027. EMS switches to 1 kg weight bands (a 500 g EMS to the US goes from ¥3,900 to ¥7,400), postcards go from ¥100 to ¥140, and parcels, small packets and the International Air Packet all change. Pick a country and a weight to see the current and the new price of every service, the cheapest way to send it, and what you save by posting before January 31, 2027.
+          Yes, this is a free calculator that compares the old and new Japan Post EMS and parcel rates. Japan Post raises international mail prices for items posted from February 1, 2027. EMS switches to 1 kg weight bands (a 500 g EMS to the US goes from ¥3,900 to ¥7,400), postcards go from ¥100 to ¥140, and parcels, small packets and the International Air Packet all change. Pick a country and a weight to see the current and the new price of every service, the cheapest way to send it, and what you save by posting before January 31, 2027.
         </p>
         <p className="mt-3 text-sm text-muted">
           Examples:{" "}
