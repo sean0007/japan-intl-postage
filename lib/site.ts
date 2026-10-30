@@ -19,6 +19,7 @@ export const SIBLING_TOOLS = [
   { href: "https://japan-parttime-check.vercel.app", label: "Japan Part-time Work Check" },
   { href: "https://japan-driving-check.vercel.app", label: "Japan Driving Check" },
   { href: "https://house-rules-check.vercel.app", label: "House Rules Check" },
+  { href: "https://japan-mynumber-card-check.vercel.app", label: "Japan My Number Card Check" },
   { href: "https://japan-dual-pricing.vercel.app", label: "Japan Dual Pricing" },
   { href: "https://japan-alert-decoder.vercel.app", label: "Japan Alert Decoder" },
   { href: "https://japan-trip-brain.vercel.app", label: "Japan Trip Brain" },
